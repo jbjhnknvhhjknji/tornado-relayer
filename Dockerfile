@@ -6,4 +6,5 @@ RUN yarn && yarn cache clean --force
 COPY . .
 
 EXPOSE 8000
+HEALTHCHECK CMD curl -f http://localhost:8000/v1/status
 ENTRYPOINT ["yarn"]
